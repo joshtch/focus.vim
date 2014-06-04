@@ -71,6 +71,8 @@ function! s:CreateSideWindow(width)
     setfiletype focusmode
     exe "vert resize ".a:width
     set winfixwidth
+    exe "normal! 500o"
+    exe "setl nomodified"
     " Jump back to the window on the right
     exe "normal! \<C-w>l"
 endfunc
